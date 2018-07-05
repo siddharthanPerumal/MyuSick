@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/navigation_icon"
+            android:title="MyDownload" />
+        <item
+            android:id="@+id/nav_photos"
+            android:icon="@drawable/navigation_icon"
+            android:title="My Favorite" />
+        <item
+            android:id="@+id/nav_movies"
+            android:icon="@drawable/navigation_icon"
+            android:title="My PlayList" />
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/navigation_icon"
+            android:title="My Mp3" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/navigation_icon"
+            android:title="Setting" />
+    </group>
+
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_about_us"
+                android:title="Version 1.0" />
+            <item
+                android:id="@+id/nav_privacy_policy"
+                android:title="www.dijo.com" />
+        </menu>
+    </item>
+</menu>

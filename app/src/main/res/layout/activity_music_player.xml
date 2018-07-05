@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.siddharth.myusick.activity.MusicPlayerActivity">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/imgGuildline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="center"
+        android:src="@drawable/default_song_icon"
+        android:transitionName="SongImage"
+        app:layout_constraintBottom_toTopOf="@+id/imgGuildline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/favoriteSong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:src="@drawable/ic_star_unselected_24dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintEnd_toStartOf="@+id/tvSongName"
+        app:layout_constraintHorizontal_weight=".3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgGuildline" />
+
+    <TextView
+        android:id="@+id/tvSongName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Song Name"
+        app:layout_constraintEnd_toStartOf="@+id/addSong"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/favoriteSong"
+        app:layout_constraintTop_toBottomOf="@+id/imgGuildline" />
+
+    <TextView
+        android:id="@+id/albumName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Album name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSongName" />
+
+    <TextView
+        android:id="@+id/Signer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/ic_mic_black_20dp"
+        android:drawablePadding="5dp"
+        android:text="Signer name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/albumName" />
+
+    <TextView
+        android:id="@+id/songLyrics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/ic_music_note_black_20dp"
+        android:drawablePadding="5dp"
+        android:text="Lyrics name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Signer" />
+
+    <ImageView
+        android:id="@+id/addSong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_add_circle_outline_black_24dp"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight=".3"
+        app:layout_constraintStart_toEndOf="@+id/tvSongName"
+        app:layout_constraintTop_toBottomOf="@+id/imgGuildline" />
+
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_navigate_before_black_24dp"
+        android:tint="@color/transparentColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyuSick"
+        android:textColor="@color/transparentColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBack" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:contentDescription="@null"
+        android:src="@drawable/overflow_icon"
+        android:tint="@color/transparentColor"
+        app:layout_constraintBottom_toTopOf="@+id/imgBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBack" />
+
+    <ImageView
+        android:id="@+id/repeatSong"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_repeat_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playAndStop"
+        app:layout_constraintEnd_toStartOf="@+id/skipToPrevious"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playAndStop" />
+
+    <ImageView
+        android:id="@+id/skipToPrevious"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_skip_previous_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playAndStop"
+        app:layout_constraintEnd_toStartOf="@+id/playAndStop"
+        app:layout_constraintHorizontal_weight=".8"
+        app:layout_constraintStart_toEndOf="@+id/repeatSong"
+        app:layout_constraintTop_toBottomOf="@+id/playAndStop" />
+
+    <ImageView
+        android:id="@+id/playAndStop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_pause_black_32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/skipToNext"
+        app:layout_constraintHorizontal_weight=".9"
+        app:layout_constraintStart_toEndOf="@+id/skipToPrevious" />
+
+    <ImageView
+        android:id="@+id/skipToNext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_skip_next_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playAndStop"
+        app:layout_constraintEnd_toStartOf="@+id/shuffled"
+        app:layout_constraintHorizontal_weight=".8"
+        app:layout_constraintStart_toEndOf="@+id/playAndStop"
+        app:layout_constraintTop_toBottomOf="@+id/playAndStop" />
+
+    <ImageView
+        android:id="@+id/shuffled"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_shuffle_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/playAndStop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight=".6"
+        app:layout_constraintStart_toEndOf="@+id/skipToNext"
+        app:layout_constraintTop_toBottomOf="@+id/playAndStop" />
+</android.support.constraint.ConstraintLayout>
